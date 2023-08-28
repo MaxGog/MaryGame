@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 338: expected ':' not found.
+    label InCityFirst
+                     ^
+
+Ren'Py Version: Ren'Py 8.1.0.23051307
+Wed Aug 16 15:40:20 2023

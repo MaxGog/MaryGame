@@ -1,0 +1,47 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 55, in script
+    mary "Можно у меня! Мои братья на неделю уехали ещё вчера."
+OSError: Couldn't find file 'voice/mary-voice2.ogg'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 55, in script
+    mary "Можно у меня! Мои братья на неделю уехали ещё вчера."
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\exports.py", line 1473, in say
+    who(what, *args, **kwargs)
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\character.py", line 1349, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\character.py", line 1000, in do_display
+    display_say(who,
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\character.py", line 690, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\display\core.py", line 3499, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\display\core.py", line 4293, in interact_core
+    renpy.audio.audio.periodic()
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\audio\audio.py", line 1224, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\audio\audio.py", line 1202, in periodic_thread_main
+    periodic_pass()
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\audio\audio.py", line 1144, in periodic_pass
+    c.periodic()
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "E:\Program Files Portable\renpy-8.1.0-sdk\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'voice/mary-voice2.ogg'.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.1.0.23051307
+Дебург: история Мэри 1.0
+Fri Aug 18 18:11:59 2023
