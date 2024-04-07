@@ -2,23 +2,23 @@
     "expansion": false,
     "google_play_key": null,
     "google_play_salt": null,
-    "heap_size": "2",
-    "icon_name": "Mary Story Demo",
+    "heap_size": "3",
+    "icon_name": "Mary Story",
     "include_pil": false,
     "include_sqlite": false,
     "layout": null,
-    "name": "Deburg: Mary Story Demo",
+    "name": "Deburg Mary Story",
     "numeric_version": 1,
     "orientation": "sensorLandscape",
-    "package": "ru.maxgog.marystorydemo",
+    "package": "ru.maxgog.marystoryprebeta",
     "permissions": [
         "VIBRATE",
         "INTERNET"
     ],
     "source": false,
-    "store": "play",
+    "store": "none",
     "update_always": true,
     "update_icons": true,
     "update_keystores": true,
-    "version": "1.2"
+    "version": "1.3.1"
 }
