@@ -17,19 +17,21 @@ default decorating = False
 
 label start:
     scene logo
-    "Добро пожаловать! Лето 2009 года."
-    "Маленький, мало кому известный город Дебург."
+    "Добро пожаловать!"
+    "Это Дебург - маленький городок, в котором очень много всего интересного!"
     scene university
     play music "Marcel_Pequel.mp3" volume 0.3
+    "А сейчас вы находитесь в главном институте культуры города!"
+    "..."
     "Мы шли по лестнице нашего института в последний раз."
-    "Если другим было грустно, то я была определённо рада! Ведь я не особо любила этот факультет."
+    "Если другим было грустно, то я определённо была рада! Ведь я не особо любила этот факультет."
     "Мы уже забрали наши аттестаты."
     "Из окон светило яркое солнце, которое манило выйти на свежий воздух и прогуляться в местном парке."
     show mary_standby_smile with Dissolve(.5)
     #voice "voice/mary-voice1.ogg"
     mary "Какие планы сегодня у вас?"
     "Да, это я! Маша... Ну или Мэри. Я шла с моими лучшими друзьями этого учебного заведения."
-    "Я никогда не думала, что смогу найти в этом университете интересных для меня личностей."
+    "Я никогда не думала, что смогу найти в этом институте интересных для меня личностей."
     show mary_standby_smile at right with moveinright
     show katy_standby_fine with Dissolve(.5)
     katy "Я предлагаю где нибудь это отметить! Мы закончили учёбу!"
@@ -43,14 +45,26 @@ label start:
     "Вот он действительно упорно учился. Я с ним познакомилась чуть позже Кейт, когда в столовой не было свободного столика, он решил подсесть к нам."
     "Конечно, мы были не против."
     "Правда мой сводный брат Крей не очень долюбливал его, я не знаю почему..."
+    "Крей в целом таки хороший, но... Иногда его замашки по поводу других очень странные."
+    "Он хакер, может из-за этого он такой закрытый и такое мнение о других."
+    "В частности... Он всегда знал больше меня о других, но решение, почему-то, всегда оставалось за мной!"
     hide mary_standby_smile
     show mary_offer_smile at right
+    #Вставить фотки братьев.
     mary "Можно у меня! Мои братья на неделю уехали ещё вчера."
+    "Да, у меня два брата!"
+    "Второго зовут Честер."
+    "И если Крей активный, стройный, поддерживает свою форму, то Честер - инверсия Крея."
+    "Не смотря на его изначальные потрясающие биологические качества, он совсем за собой не следит."
+    "Не, выглядит хорошо, но живот у него знатный. Да и много ленится и пива любит пить целыми вечерами."
+    "Будь бы у него ящик этого пива - он бы неделю не выходил из дома! Хи-хи!"
     hide katy_standby_fine
     show katy_standby_unsure
     katy "Как то дома не очень хочется, да и в такую солнечную погоду лучше на улице..."
     "Неловкая улыбка нарисовалась на лице Кейт, которая обняла свои локти."
     "Её стеснительность меня всегда умиляла. Она явно не хотела сидеть дома."
+    "А Кейт всегда любила где-то гулять."
+    "Даже свои книги, её лучшие части писала в местном парке."
     hide john_standby_smile
     show john_crossed_smile at left
     vana "Может тогда отправимся в кафе? Я знаю хорошее заведение неподалёку!"
@@ -62,9 +76,12 @@ label start:
     show mary_standby_unclear 
     mary "У нас не такие богатые родители, как у тебя, Вань..."
     vana "Да я оплачу, не переживайте! Тем более... Сегодня у нас особый случай!"
-    "Мне было как-то неловко от этого, так как я привыкла всё делать сама."
+    "Действительно, чё им, миллиардерам! Хах!"
+    "Конечно же я шучу!"
+    "У Вани не такие богатые родители. Но..."
+    "Всё равно мне было как-то неловко от этого, так как я привыкла всё делать сама."
     "И платить тоже."
-    "У нас в семье не было много денег, по этому приходилось экономить."
+    "У нас в семье не было много денег, как и у Кейт, по этому приходилось частенько экономить, дабы себя побаловать крутыми технологическими штучками."
     "Но... Раз Ваня предожил... Почему бы и нет?"
     hide mary_standby_unclear
     show mary_offer_smile
@@ -492,7 +509,7 @@ label start:
     "Во первых - он основал проект по переносу сознания в сеть!"
     "Второе - ходят очень много слухов об его окружении, ведь часто оно куда-то пропадает."
     "Что может делать хищник со своей жертвой?"
-    show mary_standby_unclear
+    show mary_standby_unclear with Dissolve(.5)
     mary "Вань... Быстрее давай, забирай карту свою и проваливаем!"
     vana "Да я уже через телефон её забираю!"
     "Ванька время зря не терял. Тем более, у него смартфон самой последней модели, имеет доступ в интернет, как и современные ноутбуки!"
@@ -513,7 +530,7 @@ label start:
     "Краем глаза я посмотрела на морду здоровяка."
     "А он не такой грозный в жизни, как говорят."
     "Мы подошли к Кейт, а та с улыбкой уже нас встречала."
-    show katy_standby_fine
+    show katy_standby_fine with Dissolve(.5)
     katy "Фух! Молодцы, что быстро! И мы нашли практику! Нас пригласили на следующей неделе проводить корпоратив у Сейф-Сеть!"
     show mary_offer_smile at right with moveinright
     mary "Нифига себе, как ты быстро меняешься в эмоциях... Ну ладно..."
@@ -560,7 +577,7 @@ label start:
     "Там нас встретил куратор всего этого дела..."
 
 
-    show kirill_smile
+    show kirill_smile with Dissolve(.5)
     play music "Marcel_Pequel.mp3" volume 0.3
     kirill "Приветствую!"
     "Достаточно харизматично поприветствовал нас представитель организации."
@@ -598,11 +615,11 @@ label start:
     scene backgroundnull
     menu:
         "C чего начать?"
-        #"Обсудить тематические цвета и украшения":
-        #    mary "Предлагаю обсудить тематику!"
-        #    mary "Предлагаю для этого прийти домой."
-        #    $ decorating = True
-        #    jump SubjectMatter
+        "Обсудить тематические цвета и украшения":
+            mary "Предлагаю обсудить тематику!"
+            mary "Предлагаю для этого прийти домой."
+            $ decorating = True
+            jump SubjectMatter
         "Обсудить мероприятие":
             mary "Предлагаю обсудить программу и само мероприятие."
             $ textpreparation = True
@@ -627,8 +644,10 @@ label Hall:
     "Правда, не большая."
     "Но разгуляться можно."
     show katy_standby_fine at left with moveinleft
+    with Dissolve(.5)
     katy "Я сделаю схему"
     show mary_bothhand with moveinright
+    with Dissolve(.5)
     mary "Зачем? Давайте просто сфоткаем план эвакуации. Распечатаем и будем работать" 
     katy "Справедливо"
     hide katy_standby_fine
@@ -638,9 +657,9 @@ label Hall:
     play sound "camera.mp3"
     "Я, сфотографировав план, вернулась обратно к своим друзьям."
     stop sound
-    show john_standby_smile
+    show john_standby_smile with Dissolve(.5)
     vana "Предлагаю осмотрется ещё, чтобы иметь представление."
-    hide john_standby_smile
+    hide john_standby_smile with Dissolve(.5)
     "Каждый из нас пошёл в разные стороны. Я же пошла в закулисье. Надо же всё таки всю предстоящую магию скрывать?"
     scene backstage
     "Куча разных коробок, стульев. Столы тоже были. М..."
@@ -689,22 +708,22 @@ label Hall:
         if textpreparation == False:
             menu:
                 "Что дальше?"
-                #"Обсудить тематические цвета и украшения":
-                    #mary "Предлагаю обсудить тематику!"
-                    #mary "Предлагаю для этого прийти домой."
-                    #$ decorating = True
-                    #jump MeetToLarry
+                "Обсудить тематические цвета и украшения":
+                    mary "Предлагаю обсудить тематику!"
+                    mary "Предлагаю для этого прийти домой."
+                    $ decorating = True
+                    jump MeetToLarry
 
-                    #jump SubjectMatter
+                    jump SubjectMatter
                 "Обсудить шутки и диалоги":
                     mary "Предлагаю обсудить программу и само мероприятие."
                     $ textpreparation = True
                     jump TextPreparationInHome
-        #if textpreparation == True:
-            #mary "Предлагаю обсудить тематику!"
-            #mary "Предлагаю для этого прийти домой."
-            #$ decorating = True
-            #jump SubjectMatter
+        if textpreparation == True:
+            mary "Предлагаю обсудить тематику!"
+            mary "Предлагаю для этого прийти домой."
+            $ decorating = True
+            jump SubjectMatter
     if decorating == True:
         if textpreparation == False:
                 mary "Предлагаю обсудить программу и само мероприятие."
@@ -717,23 +736,30 @@ label Hall:
     return
 
 label SubjectMatter:
-    scene home
     "Мы решили собраться у меня на следующий день."
+    scene home
     "Был вечер. Я ждала их с семи часов вечера."
-    "Наконец-то Ваня и Кейт постучались, я, конечно же, им открыла."
-    show katy_hello_smile
+    play sound "knock-knock.mp3"
+    "Наконец-то Ваня и Кейт постучались."
+    play sound "open-the-door.mp3"
+    "Я, конечно же, им открыла."
+    show katy_hello_smile with Dissolve(.5)
     katy "Привет! Мы не рано?"
-    show john_crossed_smile at left
+    show john_crossed_smile at left 
+    with Dissolve(.5)
     vana "Или не поздно?"
     show mary_standby_smile at right
+    with Dissolve(.5)
     mary "Нет! Как раз я только собиралась искать примеры выступлений!"
     "Они сняли обувь и куртки, после прошли в мою комнату"
     mary "На улице разве так холодно?"
     vana "Что-то сильно похолодало..."
     katy "Ага. Я сама в шоке."
-    hide mary_standby_smile
-    show mary_glitch at right
-    play sound "smile.mp3"
+    hide mary_standby_smile with Dissolve(.5)
+    hide katy_hello_smile with Dissolve(.5)
+    hide john_crossed_smile with Dissolve(.5)
+    #show mary_glitch at right
+    #play sound "smile.mp3"
     "Комната была у меня не то, чтобы большой, но очень удобная для планирования чего-либо."
     #"Я включила телевизор, затем достала свой ноутбук."
     #"По HDMI проводу подключила его к телику для того, чтобы ребятам вывелась картинка."    
@@ -741,38 +767,67 @@ label SubjectMatter:
     "По HDMI проводу подключила его к монику для того, чтобы ребятам вывелась картинка."
     "Далее мы нашли несколько видео в интернете с выступлениями на корпоративах."
     #Вставить видео
-    "Видео было много и смотрели где-то пол часа."
+    #Нарисовать арт, где Мэри, Ваня и Кейт сидят на диване
+    "Видео было много."
+    "Cмотрели где-то пол часа."
     "Кейт что-то записывала к себе в телефон."
-    hide katy_hello_smile
-    show katy_glitch
-    play sound "smile.mp3"
+    #show katy_glitch
+    #play sound "smile.mp3"
+    show katy_standby_fine
     katy "Стой... Смотри! Включи-ка это!"
     "Я провела курсор к указанному видео и кликнула по нему..."
     "Там оказался Ларри с Максом, которые презентовали на закрытой конференции свой первый имплант."
     "И это было ещё в две тысячи первом году!"
+    show mary_wow at left
+    with Dissolve(.5)
     mary "Воу..."
-    hide john_crossed_smile
-    show john_glitch at left
-    play sound "smile.mp3"
+    #show john_glitch at left
+    #play sound "smile.mp3"
+    show john_crossed_smile at right
+    with Dissolve(.5)
     vana "А это прикольно..."
     "А затем мы нашли подобное видео, но уже с открытием компании, в которой мы будем проводить мероприятие."
     katy "А вот это... Полезненько. Мы можем выцепить что-то прикольное."
+    hide mary_wow
+    show mary_bothhand at left
     mary "На всякий случай... Я это скачаю!"
+    hide mary_bothhand with Dissolve(.5)
+    hide katy_standby_fine with Dissolve(.5)
+    hide john_crossed_smile with Dissolve(.5)
     "Я скопировала ссылку видео и пошла на тот самый сайт, откуда можно скачать видео."
+    play sound "smile.mp3"
+    scene not_found
     "404 Not Found"
+    show mary_unsure with Dissolve(.5)
     mary "Что?.."
+    show katy_standby_unsure at left
+    with Dissolve(.5)
     katy "Другой сайт попробуй..."
+    scene home
     "Я быстро полезла на альтернативный сервис."
+    play sound "smile.mp3"
+    scene forbanned
     "403 Forbanned"
-    "Но и это не увенчалось успехом."
+    show mary_standby_unclear
     mary "Да фак!"
+    scene home
+    show john_standby_unsure at left
     vana "Что за хрень?!"
+    show katy_standby_unsure at right
+    with Dissolve(.5)
     katy "Открой само видео. Тогда просто на телефон запишу."
+    hide katy_standby_unsure
+    hide john_standby_unsure
     "Но когда я вновь перешла на ту вкладку, та самостоятельно закрылась."
     "Тогда я решила вставить с адресную строку ту ссылку, которую я скопировала."
     "Но она была недействительна."
+    show mary_standby_unclear with Dissolve(.5)
     mary "Да почему мы не можем просто скачать видео?!"
+    show katy_standby_unsure at right
+    with Dissolve(.5)
     katy "Могу ли привести консперологические теории?.."
+    show john_standby_unsure at left
+    with Dissolve(.5)
     vana "Шутки начались."
     mary "Может позже? У нас времени мало."
     if hasphone == True:
@@ -789,6 +844,9 @@ label SubjectMatter:
         vana "Я предлагаю сосредоточится имеено на поставленной нами задачи."
         katy "Согласна."
         mary "Единогласно!"
+    hide mary_standby_unclear with Dissolve(.5)
+    hide katy_standby_unsure with Dissolve(.5)
+    hide john_standby_unsure with Dissolve(.5)
     "Насмотревшись разных выступлений, мы принялись писать план."
     "Ваня всё записывал в блокнот, пока я с Кейт печатала на ноутбуке."
     "Вроде всё было готово."
@@ -932,27 +990,27 @@ label TextPreparationInHome:
                     mary "Было бы неплохо осмотреть зал."
                     $ hallisinspected = True
                     jump Hall
-                #"Обсудить тематические цвета и украшения":
+                "Обсудить тематические цвета и украшения":
                     #mary "Предлагаю обсудить тематику!"
                     #mary "Предлагаю для этого прийти домой."
-                    #$ decorating = True
+                    $ decorating = True
 
-                    #jump MeetToLarry
+                    jump MeetToLarry
 
-                    #jump SubjectMatter
+                    jump SubjectMatter
         if decorating == True:
             mary "Было бы неплохо осмотреть зал."
             $ hallisinspected = True
             jump Hall
     if hallisinspected == True:
         if decorating == False:
-                #mary "Предлагаю обсудить тематику!"
-                #mary "Предлагаю для этого прийти домой."
-                #$ decorating = True
+                mary "Предлагаю обсудить тематику!"
+                mary "Предлагаю для этого прийти домой."
+                $ decorating = True
 
                 jump MeetToLarry
 
-                #jump SubjectMatter
+                jump SubjectMatter
         if decorating == True:
             mary "Ну, мы готовы!"
             katy "Отлично!"
@@ -1016,13 +1074,11 @@ label MeetToLarry:
     "Дальше он скрылся."
     "Со всей этой информацией я пошла домой."
     play sound "smile.mp3"
-    #jump SubjectMatter
-    jump ComingSoon
+    jump SubjectMatter
 
     return
 
 label MainEvent:
-    jump ComingSoon
     scene hall
     "Настал тот самый день 'X'."
     "Всё было готово. Мы находились в самом зале."
@@ -1155,7 +1211,7 @@ label FirstEnd:
 label SecondEnd:
     scene servers
     mary "Я знаю, что нужно делать!"
-    "Спсибо за помощь!"
+    "Спасибо за помощь!"
     "Нужно найти Ларри."
 
 
