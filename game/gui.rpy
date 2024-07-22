@@ -59,10 +59,10 @@ define gui.interface_text_color = '#ffffff'
 ## Шрифты и их размеры #########################################################
 
 ## Шрифт, используемый внутриигровым текстом.
-define gui.text_font = "Caviar.ttf"
+define gui.text_font = "Sriracha.ttf"
 
 ## Шрифт, используемый именами персонажей.
-define gui.name_text_font = "Capsmall.ttf"
+define gui.name_text_font = "AguScript.ttf"
 
 ## Шрифт, используемый текстом вне игры.
 define gui.interface_text_font = "Caviar.ttf"
