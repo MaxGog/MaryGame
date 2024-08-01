@@ -10,7 +10,7 @@
     "name": "Deburg Mary Story",
     "numeric_version": 1,
     "orientation": "sensorLandscape",
-    "package": "ru.maxgog.marystoryprebeta",
+    "package": "ru.maxgog.marystory",
     "permissions": [
         "VIBRATE",
         "INTERNET"
@@ -20,5 +20,5 @@
     "update_always": true,
     "update_icons": true,
     "update_keystores": true,
-    "version": "1.4.0"
+    "version": "1.4.1"
 }

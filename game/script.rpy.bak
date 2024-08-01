@@ -26,15 +26,15 @@ label start:
     "Счастливую концовку делаешь ты."
     "Судьба в твоих руках."
     
-    call afterUniversity from _call_afterUniversity
-    call inThePark from _call_inThePark
-    call inTheRestaurant from _call_inTheRestaurant
-    call inTheMetro from _call_inTheMetro
+    call afterUniversity
+    call inThePark
+    call inTheRestaurant
+    call inTheMetro
 
     scene black
     "На следующий день..."
 
-    call nextDay from _call_nextDay
+    call nextDay
 
     scene backgroundnull
     menu:
@@ -43,15 +43,15 @@ label start:
             mary "Предлагаю обсудить сначала программу и само мероприятие."
             mary "Предлагаю для этого прийти домой."
             $ decorating = True
-            call SubjectMatter from _call_SubjectMatter
+            call SubjectMatter
         "Обсудить саму компанию и их разработку":
             mary "Предлагаю обсудить сначала саму технологию."
             $ textpreparation = True
-            call TextPreparationInHome from _call_TextPreparationInHome
+            call TextPreparationInHome
         "Осмотреть зал":
             mary "Было бы неплохо сначала осмотреть зал."
             $ hallisinspected = True
-            call Hall from _call_Hall
+            call Hall
 
     while controller:
         if hallisinspected == True and textpreparation == True and decorating == True:
@@ -67,22 +67,22 @@ label start:
                             mary "Предлагаю обсудить тематику!"
                             mary "Предлагаю для этого прийти домой."
                             $ decorating = True
-                            call MeetToLarry from _call_MeetToLarry
-                            call SubjectMatter from _call_SubjectMatter_1
+                            call MeetToLarry
+                            call SubjectMatter
                         "Обсудить шутки и диалоги":
                             mary "Предлагаю обсудить программу и само мероприятие."
                             $ textpreparation = True
-                            call TextPreparationInHome from _call_TextPreparationInHome_1
+                            call TextPreparationInHome
                 else:
                     mary "Предлагаю обсудить тематику!"
                     mary "Предлагаю для этого прийти домой."
                     $ decorating = True
-                    call SubjectMatter from _call_SubjectMatter_2
+                    call SubjectMatter
             else:
                 if textpreparation == False:
                         mary "Предлагаю обсудить программу и само мероприятие."
                         $ textpreparation = True
-                        call TextPreparationInHome from _call_TextPreparationInHome_2
+                        call TextPreparationInHome
         if decorating == True:
             play music "Fantasy_World.mp3" volume 0.3
             scene backgroundnull
@@ -94,21 +94,21 @@ label start:
                             mary "Предлагаю обсудить тематику!"
                             mary "Предлагаю для этого прийти домой."
                             $ decorating = True
-                            call MeetToLarry from _call_MeetToLarry_1
-                            call SubjectMatter from _call_SubjectMatter_3
+                            call MeetToLarry
+                            call SubjectMatter
                         "Обсудить шутки и диалоги":
                             mary "Предлагаю обсудить программу и само мероприятие."
                             $ textpreparation = True
-                            call TextPreparationInHome from _call_TextPreparationInHome_3
+                            call TextPreparationInHome
                 else:
                     mary "Было бы неплохо осмотреть зал."
                     $ hallisinspected = True
-                    call Hall from _call_Hall_1
+                    call Hall
             else:
                 if textpreparation == False:
                     mary "Предлагаю обсудить программу и само мероприятие."
                     $ textpreparation = True
-                    call TextPreparationInHome from _call_TextPreparationInHome_4
+                    call TextPreparationInHome
         if textpreparation == True:
             play music "Fantasy_World.mp3" volume 0.3
             scene backgroundnull
@@ -119,44 +119,44 @@ label start:
                         "Осмотреть зал":
                             mary "Было бы неплохо осмотреть зал."
                             $ hallisinspected = True
-                            call Hall from _call_Hall_2
+                            call Hall
                         "Обсудить тематические цвета и украшения":
                             #mary "Предлагаю обсудить тематику!"
                             #mary "Предлагаю для этого прийти домой."
                             $ decorating = True
 
-                            call MeetToLarry from _call_MeetToLarry_2
+                            call MeetToLarry
 
-                            call SubjectMatter from _call_SubjectMatter_4
+                            call SubjectMatter
                 else:
                     mary "Было бы неплохо осмотреть зал."
                     $ hallisinspected = True
-                    call Hall from _call_Hall_3
+                    call Hall
             else:
                 if decorating == False:
                         mary "Предлагаю обсудить тематику!"
                         mary "Предлагаю для этого прийти домой."
                         $ decorating = True
 
-                        call MeetToLarry from _call_MeetToLarry_3
+                        call MeetToLarry
 
-                        call SubjectMatter from _call_SubjectMatter_5
+                        call SubjectMatter
                     
 
     mary "Ну, мы готовы!"
     katy "Отлично!"
     jump ComingSoon
-    call conversationAtEvent from _call_conversationAtEvent
+    call conversationAtEvent
 
     if MeetToLarry == True:
         menu:
             "Что делать?!"
             "Попросить помомщи":
-                call firstEnd from _call_firstEnd
+                call firstEnd
             "Разрулить самостоятельно":
-                call secondEnd from _call_secondEnd
+                call secondEnd
     if MeetToLarry == False:
-        call secondEnd from _call_secondEnd_1
+        call secondEnd
 
     return
 
