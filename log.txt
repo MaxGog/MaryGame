@@ -1,32 +1,31 @@
-2024-08-01 17:33:20 UTC
-Windows-10-10.0.22631
-Ren'Py 8.2.3.24061702
+2024-09-05 07:43:31 UTC
+Windows-10-10.0.19045
+Ren'Py 8.3.0.24082114
 
-Early init took 2.61s
-Loading error handling took 0.27s
-Loading script took 1.70s
-Loading save slot metadata took 0.06s
+Early init took 0.46s
+Loading error handling took 0.12s
+Loading script took 0.52s
+Loading save slot metadata took 0.70s
 Loading persistent took 0.00s
-Running init code took 0.14s
-Loading analysis data took 0.00s
+Running init code took 0.29s
+Loading analysis data took 0.06s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\maxgo\\AppData\\Roaming/RenPy/backups\\MaryGame':
-Dump and make backups took 0.09s
+Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
+Initial gc took 0.03s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.34s
+Creating interface object took 0.31s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.02s
-Prepare screens took 0.17s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.03s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
