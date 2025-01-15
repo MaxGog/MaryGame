@@ -1,5 +1,5 @@
 define mary = Character('Мэри', color="#c8ffc8") #Мэри
-define katy = Character('Кейт', color="#6666ff") #Кейт
+define katy = Character('Катя', color="#6666ff") #Кейт
 define vana = Character('Ваня', color="#8b00ff") #Ваня
 #define max = Character('Макс Апшер', color="#ffffff")
 #define lincoln = Character('Линкольн 1507', color="#ffffff")
@@ -110,7 +110,7 @@ label start:
 
     mary "Ну, мы готовы!"
     katy "Отлично!"
-    
+
     call conversationAtEvent from _call_conversationAtEvent
 
     return
