@@ -60,7 +60,7 @@ label conversationAtEvent:
     "Настал тот самый день 'X'."
     "Всё было готово. Мы находились в самом зале."
     "Каждый был на своих местах. Гости должны были зайти через минут пятнадцать."
-    if MeetToLarry == True:
+    if meetinglarry == True:
         show mary_unsure
         mary "Ребят. У меня есть дело."
         show katy_standby_unsure at right

@@ -3,9 +3,9 @@
 While running game code:
   File "game/script.rpy", line 149, in script call
     call conversationAtEvent from _call_conversationAtEvent
-  File "game/conversationatevent_script.rpy", line 26, in script
+  File "game/conversationatevent_script.rpy", line 63, in script
     if MeetToLarry == True:
-  File "game/conversationatevent_script.rpy", line 26, in <module>
+  File "game/conversationatevent_script.rpy", line 63, in <module>
     if MeetToLarry == True:
 NameError: name 'MeetToLarry' is not defined
 
@@ -14,7 +14,7 @@ NameError: name 'MeetToLarry' is not defined
 Full traceback:
   File "game/script.rpy", line 149, in script call
     call conversationAtEvent from _call_conversationAtEvent
-  File "game/conversationatevent_script.rpy", line 26, in script
+  File "game/conversationatevent_script.rpy", line 63, in script
     if MeetToLarry == True:
   File "/Users/maxgo/Development/SDK/RenPy/renpy/ast.py", line 1849, in execute
     if renpy.python.py_eval(condition):
@@ -22,11 +22,11 @@ Full traceback:
     return py_eval_bytecode(code, globals, locals)
   File "/Users/maxgo/Development/SDK/RenPy/renpy/python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/conversationatevent_script.rpy", line 26, in <module>
+  File "game/conversationatevent_script.rpy", line 63, in <module>
     if MeetToLarry == True:
 NameError: name 'MeetToLarry' is not defined
 
 macOS-15.2-arm64-arm-64bit arm64
 Ren'Py 8.3.4.24120703
 Дебург: история Мэри 1.5.0
-Wed Jan 15 14:48:52 2025
+Wed Jan 15 15:22:34 2025
