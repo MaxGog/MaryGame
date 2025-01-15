@@ -2,11 +2,65 @@
 errors listed below, and try again.
 
 
-The label conversationAtEvent is defined twice, at File "game/conversationAtEvent.rpy", line 1:
-label conversationAtEvent:
-and File "game/thirdAct.rpy", line 1:
-label conversationAtEvent:
+The label _call_MeetToLarry is defined twice, at File "game/script.rpy", line 52:
+                    call MeetToLarry from _call_MeetToLarry
+and File "game/script.rpy", line 64:
+                    call MeetToLarry from _call_MeetToLarry
+
+
+The label _call_TextPreparationInHome is defined twice, at File "game/script.rpy", line 57:
+                    call TextPreparationInHome from _call_TextPreparationInHome
+and File "game/script.rpy", line 69:
+                    call TextPreparationInHome from _call_TextPreparationInHome
+
+
+The label _call_MeetToLarry is defined twice, at File "game/script.rpy", line 64:
+                    call MeetToLarry from _call_MeetToLarry
+and File "game/script.rpy", line 79:
+                    call MeetToLarry from _call_MeetToLarry
+
+
+The label _call_SubjectMatter is defined twice, at File "game/script.rpy", line 53:
+                    call SubjectMatter from _call_SubjectMatter
+and File "game/script.rpy", line 80:
+                    call SubjectMatter from _call_SubjectMatter
+
+
+The label _call_TextPreparationInHome is defined twice, at File "game/script.rpy", line 69:
+                    call TextPreparationInHome from _call_TextPreparationInHome
+and File "game/script.rpy", line 84:
+            call TextPreparationInHome from _call_TextPreparationInHome
+
+
+The label _call_SubjectMatter is defined twice, at File "game/script.rpy", line 80:
+                    call SubjectMatter from _call_SubjectMatter
+and File "game/script.rpy", line 89:
+            call SubjectMatter from _call_SubjectMatter
+
+
+The label _call_Hall is defined twice, at File "game/script.rpy", line 76:
+                    call Hall from _call_Hall
+and File "game/script.rpy", line 93:
+            call Hall from _call_Hall
+
+
+The label _call_SubjectMatter is defined twice, at File "game/script.rpy", line 89:
+            call SubjectMatter from _call_SubjectMatter
+and File "game/script.rpy", line 101:
+                    call SubjectMatter from _call_SubjectMatter
+
+
+The label _call_TextPreparationInHome is defined twice, at File "game/script.rpy", line 84:
+            call TextPreparationInHome from _call_TextPreparationInHome
+and File "game/script.rpy", line 105:
+                    call TextPreparationInHome from _call_TextPreparationInHome
+
+
+The label _call_Hall is defined twice, at File "game/script.rpy", line 93:
+            call Hall from _call_Hall
+and File "game/script.rpy", line 109:
+                    call Hall from _call_Hall      
 
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Jan 15 14:23:05 2025
+Wed Jan 15 17:30:39 2025
