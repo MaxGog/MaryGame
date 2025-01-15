@@ -278,7 +278,7 @@ label inTheRestaurant:
     return
 
 label inTheMetro:
-    scene metro
+    scene marysubwayfullscreen
 
     "Я спокойно оплатила проезд, прошла через турникет и села в вагон."
     "Мне надо было доехать до конечной станции своей ветки."

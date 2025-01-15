@@ -110,7 +110,7 @@ label start:
 
     mary "Ну, мы готовы!"
     katy "Отлично!"
-    #jump ComingSoon
+    
     call conversationAtEvent from _call_conversationAtEvent
 
     return
