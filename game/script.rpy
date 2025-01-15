@@ -145,18 +145,8 @@ label start:
 
     mary "Ну, мы готовы!"
     katy "Отлично!"
-    jump ComingSoon
+    #jump ComingSoon
     call conversationAtEvent from _call_conversationAtEvent
-
-    if MeetToLarry == True:
-        menu:
-            "Что делать?!"
-            "Попросить помомщи":
-                call firstEnd from _call_firstEnd
-            "Разрулить самостоятельно":
-                call secondEnd from _call_secondEnd
-    if MeetToLarry == False:
-        call secondEnd from _call_secondEnd_1
 
     return
 
