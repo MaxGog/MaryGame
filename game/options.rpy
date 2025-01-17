@@ -1,4 +1,4 @@
-﻿define config.name = _("Дебург: история Мэри")
+﻿define config.name = _("Дебург: история Мэри (ранняя сборка)")
 define gui.show_name = True
 define config.version = "1.5.0"
 

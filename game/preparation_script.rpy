@@ -115,6 +115,7 @@ label Hall:
     "Мне трудно одной справиться..."
 
     scene black
+    play sound "home_night_version_1.mp3"
 
     "Я приехала домой... И просто упала на кроварь, но ощущение..."
     "Будто в чёрную дыру..."
@@ -135,17 +136,20 @@ label Hall:
     "ХХХХРРРРРРРР...."
 
     "Но а вот и следующий день!"
+
+    stop sound
     
     return
 
 label SubjectMatter:
+    play music "Marcel_Pequel.mp3" volume 0.3
     "Мы решили собраться у меня на следующий день."
     
     scene home
     "Был вечер. Я ждала их с семи часов вечера."
-    #play sound "knock-knock.mp3"
+    play sound "knock-knock.mp3"
     "Наконец-то Ваня и Катя постучались."
-    #play sound "open-the-door.mp3"
+    play sound "open-the-door.mp3"
     "Я, конечно же, им открыла."
     show katy_hello_smile with Dissolve(.5)
     katy "Привет! Мы не рано?"
@@ -169,19 +173,23 @@ label SubjectMatter:
     #"Я включила телевизор, затем достала свой ноутбук."
     #"По HDMI проводу подключила его к телику для того, чтобы ребятам вывелась картинка."    
     "Я включила монитор, затем достала свой ноутбук."
+    play sound "connected.mp3"
     "По HDMI проводу подключила его к монику для того, чтобы ребятам вывелась картинка."
     "Далее мы нашли несколько видео в интернете с выступлениями и презентациями."
     #Вставить видео
     #Нарисовать арт, где Мэри, Ваня и Кейт сидят на диване
     "Видео было много."
     "Cмотрели где-то пол часа."
+    play sound "keyboard.mp3"
     "Катька что-то записывала к себе в телефон."
+    stop sound
     #show katy_glitch
     #play sound "smile.mp3"
 
     show katy_standby_fine
     katy "Стой... Смотри! Включи-ка это!"
     "Я провела курсор к указанному видео и кликнула по нему..."
+    play sound "mouse_click.mp3"
     "Там оказался Ларри с Максом, которые презентовали на закрытой конференции свой первый имплант."
     "И это было ещё в две тысячи первом году!"
 
@@ -206,6 +214,7 @@ label SubjectMatter:
     hide john_crossed_smile with Dissolve(.5)
 
     "Я скопировала ссылку видео и пошла на тот самый сайт, откуда можно скачать видео."
+    stop music
     play sound "smile.mp3"
     scene not_found
     "404 Not Found"
@@ -264,15 +273,21 @@ label SubjectMatter:
     hide katy_standby_unsure with Dissolve(.5)
     hide john_standby_unsure with Dissolve(.5)
 
+    play music "Marcel_Pequel.mp3" volume 0.3
     "Насмотревшись разных выступлений, мы принялись писать план."
+    play sound "write_page.mp3"
     "Ваня всё записывал в блокнот, пока я с Катей печатала уже план на ноутбуке и примерные наброски сценария."
     
     "Само выступление мы поделили на 4-ре части."
     "Исходя из самих данных, которые нам предоставил Кирилл, мы будем представлять продукт ближайшим партнёрам, которые и являются потенциальными покупателями."
+    play sound "next_page.mp3"
     "Первая часть: вступительная."
     "Здесь мы будем говорить о трудностях безопасности сетей."
+    play sound "next_page.mp3"
     "Вторая часть: как в жизни это пригодиться всем!"
+    play sound "next_page.mp3"
     "Третья часть: технические характеристики."
+    play sound "next_page.mp3"
     "Четвёртая часть: когда будет выпущно и когда интегрировано!"
 
     "Вроде всё было готово."
@@ -283,7 +298,7 @@ label SubjectMatter:
     "Все отправились домой."
     "Я тоже отправилась домой."
     "А точнее, к себе в кровать."
-
+    play sound "home_night_version_1.mp3"
     "Но перед этим, я заглянула в ванную комнату."
     "Я умылась, почистила зубы..."
     "Затем отправилась к себе в комнату."
@@ -293,7 +308,7 @@ label SubjectMatter:
     "Но, я просто легла в кровать..."
 
     scene marybedroomfullscreen
-
+    stop music
     "Меня всё тревожит..."
     "Всё очень странно..."
     "Это видео..."
@@ -341,13 +356,15 @@ label SubjectMatter:
 
     "Но а вот и следующий день!"
 
+    stop sound
+
     return
 
 
 label TextPreparationInHome:
     scene cafe
     play music "Savfk.mp3"
-    play sound "rest.mp3" volume 0.3
+    #play audio "rest.mp3" volume 0.3
 
     "Мы решили пойти в то кафе, которое мы все знаем и любим."
     "А так же мы были там вчера!"
@@ -366,6 +383,7 @@ label TextPreparationInHome:
     "Мы сели за столик около окна, предварительно заказав своё кофе."
     "Мы ещё так же решили заказать десерт, чтобы не просто так пить."
     "На улице сегодня было довольно много народу. Все, вечно, куда-то спешили."
+    play sound "backpack.mp3"
     "Катя достала свой ноутбук, дабы посмотреть, какие есть аналоги этой..."
     "Штуки."
     "Она открыла крышку и на начальном экране отображалась плитка погоды."
@@ -380,6 +398,7 @@ label TextPreparationInHome:
     show john_hello_smile at right
     vana "Это ещё тепло."
 
+    play sound "cardboard_cup.mp3"
     "Он усмехнулся и взял своё кофе в картонной коробке."
     katy "Так, что у нас имеется."
 
@@ -401,12 +420,13 @@ label TextPreparationInHome:
     hide john_hello_smile
     play sound "smile.mp3"
     stop music
+    stop audio
     ":)"
     #"Ведь я хакер."
     #"Так ведь? Мой друг."
     stop sound
     play music "Savfk.mp3"
-    play sound "rest.mp3" volume 0.3
+    #play audio "rest.mp3" volume 0.3
     show katy_standby_fine at left
     with Dissolve(.5)
     katy "Да... DDos-атак станет меньше... Да и интернет безопаснее."
@@ -463,7 +483,8 @@ label TextPreparationInHome:
     #TODO
     #ПОСТАВИТЬ СЮДА КАКОЙ-ТО РАССЛАБЛЯЮЩИЙ ТРЕК
 
-    play sound "park.mp3" volume 0.5
+    stop audio 
+    play sound "city_version_1.mp3" volume 0.5
 
     "Я медленно пошла вперёд, всё оглядывая."
     "Последние солнечные лучи старались осветить город, пока небо уже покраснело..."
@@ -486,6 +507,7 @@ label TextPreparationInHome:
     "Даже дом уже не кажется таким страшным."
 
     scene black
+    play sound "home_night_version_1.mp3"
 
     "И я наконец то дома... И просто упала на кроварь"
     "Надо бы, конечно, ещё проверить сценарий..."
@@ -509,5 +531,7 @@ label TextPreparationInHome:
     "ХХХХРРРРРРРР...."
 
     "Но а вот и следующий день!"
+
+    stop sound
 
     return

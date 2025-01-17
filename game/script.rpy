@@ -44,14 +44,14 @@ label start:
         elif hallisinspected and not decorating and not textpreparation:
             menu:
                 "Что дальше?"
-                "Обсудить тематические цвета и украшения":
+                "Обсудить план мероприятия":
                     mary "Предлагаю обсудить тематику!"
                     mary "Для этого предлагаю прийти ко мне домой завтра!"
                     katy "Отличная идея!"
                     $ decorating = True
                     call MeetToLarry from _call_MeetToLarry
                     call SubjectMatter from _call_SubjectMatter
-                "Обсудить шутки и диалоги":
+                "Обсудить саму компанию и их разработку":
                     mary "Предлагаю обсудить программу и само мероприятие."
                     $ textpreparation = True
                     call TextPreparationInHome from _call_TextPreparationInHome
@@ -63,7 +63,7 @@ label start:
                     $ hallisinspected = True
                     call MeetToLarry from _call_MeetToLarry_2
                     call Hall from __call_Hall
-                "Обсудить шутки и диалоги":
+                "Обсудить саму компанию и их разработку":
                     mary "Предлагаю обсудить программу и само мероприятие."
                     $ textpreparation = True
                     call TextPreparationInHome from _call_TextPreparationInHome_2
@@ -74,7 +74,7 @@ label start:
                     mary "Было бы неплохо осмотреть зал."
                     $ hallisinspected = True
                     call Hall from _call_Hall
-                "Обсудить тематические цвета и украшения":
+                "Обсудить план мероприятия":
                     $ decorating = True
                     call MeetToLarry from _call_MeetToLarry_3
                     call SubjectMatter from _call_SubjectMatter_2
