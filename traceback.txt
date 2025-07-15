@@ -1,28 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 37, in script call
-    call nextDay from _call_nextDay
-  File "game/beginningstory_script.rpy", line 599, in script
-    vana "В Бете есть кэшбек. 10%."
-ValueError: incomplete format
+  File "game/script.rpy", line 31, in script call
+    call inTheRestaurant from _call_inTheRestaurant
+  File "game/script.rpy", line 31, in script call
+    call inTheRestaurant from _call_inTheRestaurant
+renpy.script.LabelNotFound: could not find label 'inTheRestaurant'.
 
 -- Full Traceback ------------------------------------------------------------
 
-Full traceback:
-  File "game/script.rpy", line 37, in script call
-    call nextDay from _call_nextDay
-  File "game/beginningstory_script.rpy", line 599, in script
-    vana "В Бете есть кэшбек. 10%."
-  File "/Applications/RenPy/renpy/ast.py", line 2586, in execute
-    Say.execute(self)
-  File "/Applications/RenPy/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Applications/RenPy/renpy/exports/sayexports.py", line 121, in say
-    what = what % tag_quoting_dict
-ValueError: incomplete format
+Traceback (most recent call last):
+  File "game/script.rpy", line 31, in script call
+    call inTheRestaurant from _call_inTheRestaurant
+  File "renpy/ast.py", line 1622, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 31, in script call
+    call inTheRestaurant from _call_inTheRestaurant
+  File "renpy/script.py", line 1163, in lookup
+    raise LabelNotFound(original)
+renpy.script.LabelNotFound: could not find label 'inTheRestaurant'.
 
 macOS-15.5-arm64-arm-64bit arm64
-Ren'Py 8.3.7.25031702
+Ren'Py 8.4.0.25071206
 Дебург: история Мэри (ранняя сборка) 1.5.0
-Tue Jul 15 13:48:24 2025
+Tue Jul 15 14:14:37 2025
