@@ -1604,3 +1604,50 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+screen preparation_choices():
+    modal True
+    style_prefix "choice"
+    
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xpadding 50
+        ypadding 30
+        background Solid("#00000099")
+        
+        vbox:
+            align (0.5, 0.5)
+            spacing 25
+            
+            text "Выберите действие:":
+                size 28
+                color "#ffffff"
+                outlines [(2, "#000000", 0, 0)]
+                xalign 0.5
+            
+            textbutton "Осмотреть зал":
+                action [Hide("preparation_choices"), Jump("inspect_hall")]
+                style "menu_button"
+                at choice_transformation(0.5, 0.4)
+                xalign 0.5
+            
+            textbutton "Исследовать записи":
+                action [Hide("preparation_choices"), Jump("research_tech")]
+                style "menu_button"
+                at choice_transformation(0.5, 0.6)
+                xalign 0.5
+
+style menu_button:
+    background Frame("gui/button/choice_idle_background.png", 25, 25)
+    hover_background Frame("gui/button/choice_hover_background.png", 25, 25)
+    padding (25, 10)
+    xsize 300
+    xalign 0.5
+
+style menu_button_text:
+    color "#ffffff"
+    hover_color "#ffcc00"
+    outlines [(2, "#000000", 0, 0)]
+    size 24
+    align (0.5, 0.5)

@@ -1,12 +1,18 @@
-define mary = Character('Мэри', color="#c8ffc8") #Мэри
-define katy = Character('Катя', color="#6666ff") #Кейт
-define vana = Character('Ваня', color="#8b00ff") #Ваня
-#define max = Character('Макс Апшер', color="#ffffff")
-#define lincoln = Character('Линкольн 1507', color="#ffffff")
-define kirill = Character('Кирилл', color="#6666ff") #Кирилл
-define unknow = Character('null', color="#ff0000") #Ларри
-#define cray = Character('Крей', color="#8b00ff")
-define larry = Character('Ларри', color="#ff0000") #Ларри
+# Определение персонажей
+define mary = Character('Мэри', color="#c8ffc8", what_italic=True)
+define katy = Character('Катя', color="#6666ff", what_outlines=[(1, "#1a1a1a")])
+define vana = Character('Ваня', color="#8b00ff", what_slow=10)
+define kirill = Character('Кирилл', color="#6666ff", what_bold=True)
+define larry = Character('Ларри', color="#ff0000", what_size=32)
+define unknow = Character('Неизвестный', color="#ff0000", what_size=32)
+
+# Переменные состояния
+default secrets_unlocked = {
+    "hasphone": False,
+    "meetlarry": False,
+    "hall_inspected": False,
+    "texts_decrypted": False
+}
 
 default hasphone = False
 default meetlarry = False
@@ -16,104 +22,89 @@ default textpreparation = False
 default decorating = False
 default controller = True
 
+# Определение кастомных трансформаций
+transform slow_fadein:
+    alpha 0.0
+    linear 3.0 alpha 1.0
+
+transform choice_transformation(xpos, ypos):
+    xpos xpos ypos ypos
+    zoom 0.9
+    easein 0.5 zoom 1.0
+
 label start:
-    scene logo
-    "Добро пожаловать!"
-    "Это Дебург - маленький городок, в котором очень много всего интересного!"
-    "Запомни!"
-    "Любой выбор имеет свою цену..."
-    "..."
-    "Счастливую концовку делаешь ты."
-    "Судьба в твоих руках."
-    
+    scene black with Dissolve(2.0)
+    play sound "heartbeat.wav" fadein 1.5
+
+    show title as title at truecenter:
+        alpha 0.0
+        linear 2.0 alpha 1.0
+        pause 1.0
+        linear 1.0 alpha 0.0
+
+    "{cps=15}Город, где тени длиннее зданий...{/cps}"
+    "{cps=20}Где любой выбор оставляет шрам...{/cps}"
+    play music "ambient_drone.ogg" volume 0.4
+
+    show text "Счастливый конец — это иллюзия\nТы лишь выбираешь,\nкакой кошмар предпочтительнее" at center:
+        xalign 0.5
+        yalign 0.7
+        slow_fadein
+
+    pause 3.0
+    scene black with irisout
+
+    # Основной сюжет
     call afterUniversity from _call_afterUniversity
     call inThePark from _call_inThePark
     call inTheRestaurant from _call_inTheRestaurant
     call inTheMetro from _call_inTheMetro
 
     scene black
-    "На следующий день..."
+    show text "24 часа спустя..." at truecenter with dissolve
+    pause 1.5
+    scene black with dissolve
+    
+label preparation_loop:
+    play music "tension_loop.ogg" volume 0.3 fadein 2.0
+    scene backgroundnull with dissolve:
+        blur 5
 
-    call nextDay from _call_nextDay
+    if secrets_unlocked["hall_inspected"] and secrets_unlocked["texts_decrypted"]:
+        jump conversationAtEvent
+    else:
+        call screen preparation_choices
 
-    while controller:
-        play music "Fantasy_World.mp3" volume 0.3
-        scene backgroundnull
-        if hallisinspected and textpreparation and decorating:
-            $ controller = False
-        elif hallisinspected and not decorating and not textpreparation:
-            menu:
-                "Что дальше?"
-                "Обсудить план мероприятия":
-                    mary "Предлагаю обсудить тематику!"
-                    mary "Для этого предлагаю прийти ко мне домой завтра!"
-                    katy "Отличная идея!"
-                    $ decorating = True
-                    call MeetToLarry from _call_MeetToLarry
-                    call SubjectMatter from _call_SubjectMatter
-                "Обсудить саму компанию и их разработку":
-                    mary "Предлагаю обсудить программу и само мероприятие."
-                    $ textpreparation = True
-                    call TextPreparationInHome from _call_TextPreparationInHome
-        elif not hallisinspected and decorating and not textpreparation:
-            menu:
-                "Что дальше?"
-                "Осмотреть зал":
-                    mary "Предлагаю осмотреть зал завтра!"
-                    $ hallisinspected = True
-                    call MeetToLarry from _call_MeetToLarry_2
-                    call Hall from __call_Hall
-                "Обсудить саму компанию и их разработку":
-                    mary "Предлагаю обсудить программу и само мероприятие."
-                    $ textpreparation = True
-                    call TextPreparationInHome from _call_TextPreparationInHome_2
-        elif not hallisinspected and not decorating and textpreparation:
-            menu:
-                "Что дальше?"
-                "Осмотреть зал":
-                    mary "Было бы неплохо осмотреть зал."
-                    $ hallisinspected = True
-                    call Hall from _call_Hall
-                "Обсудить план мероприятия":
-                    $ decorating = True
-                    call MeetToLarry from _call_MeetToLarry_3
-                    call SubjectMatter from _call_SubjectMatter_2
-        elif hallisinspected and not textpreparation and decorating:
-            mary "Предлагаю обсудить программу и само мероприятие."
-            $ textpreparation = True
-            call TextPreparationInHome from _call_TextPreparationInHome_3
-        elif hallisinspected and textpreparation and not decorating:
-            mary "Предлагаю обсудить тематику!"
-            mary "Для этого предлагаю прийти ко мне домой завтра!"
-            $ decorating = True
-            call SubjectMatter from _call_SubjectMatter_3
-        elif not hallisinspected and decorating and textpreparation:
-            mary "Дальше было бы неплохо осмотреть зал..."
-            $ hallisinspected = True
-            call Hall from _call_Hall_2
-        else:
-            menu:
-                "Нам нужно представить новую разработку Сейф-сеть с помощью внутренней презентации их компаний. Что нужно начать?"
-                "Обсудить план мероприятия":
-                    mary "Предлагаю обсудить сначала программу и само мероприятие."
-                    mary "Предлагаю для этого прийти домой."
-                    $ decorating = True
-                    call SubjectMatter from _call_SubjectMatter_4
-                "Обсудить саму компанию и их разработку":
-                    mary "Предлагаю обсудить сначала саму технологию."
-                    $ textpreparation = True
-                    call TextPreparationInHome from _call_TextPreparationInHome_4
-                "Осмотреть зал":
-                    mary "Было бы неплохо сначала осмотреть зал."
-                    $ hallisinspected = True
-                    call Hall from _call_Hall_3      
+label inspect_hall:
+    scene office with blinds:
+        matrixcolor BrightnessMatrix(-0.1)
+    
+    "Старый конференц-зал пахнет затхлостью и озоном..."
+    show mary_standby_unclear at left with dissolve
+    mary "Обратите внимание на систему вентиляции..."
+    show katy_standby_unsure at right with moveinright
+    katy "По документам здесь последний раз ремонтировали в 2005..."
+    play sound "metal_creak.wav"
+    with hpunch
+    $ secrets_unlocked["hall_inspected"] = True
+    call Hall from __call_Hall
+    $ hallisinspected = True
+    jump preparation_loop
 
-    mary "Ну, мы готовы!"
-    katy "Отлично!"
-
-    call conversationAtEvent from _call_conversationAtEvent
-
-    return
+label research_tech:
+    scene servers
+    show text "{font=DejaVuSans-Bold.ttf}Протокол L-7{/font}" at truecenter:
+        alpha 0.0
+        linear 2.0 alpha 0.7
+    
+    play sound "glitch.wav"
+    $ secrets_unlocked["texts_decrypted"] = True
+    call TextPreparationInHome from _call_TextPreparationInHome
+    call MeetToLarry from _call_MeetToLarry
+    call SubjectMatter from _call_SubjectMatter
+    $ textpreparation = True
+    jump preparation_loop
 
 label ComingSoon:
     $ renpy.movie_cutscene("videos/comingsoon.webm")
+    return

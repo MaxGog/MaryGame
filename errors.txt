@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/beginningstory_script.rpy", line 30: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "Тогда между нами пробежала та самая искра, из которой разгорелась настоящая дружба."
-    ^
+File "game/script.rpy", line 54: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    "task_board" at center:
+                    ^
+
+File "game/script.rpy", line 112: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    "computer_screen" at truecenter zoom 1.5
+                         ^
 
 Ren'Py Version: Ren'Py 8.4.0.25071206
-Tue Jul 15 14:13:22 2025
+Tue Jul 15 16:22:47 2025
