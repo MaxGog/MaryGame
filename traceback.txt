@@ -1,27 +1,37 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 31, in script call
-    call inTheRestaurant from _call_inTheRestaurant
-  File "game/script.rpy", line 31, in script call
-    call inTheRestaurant from _call_inTheRestaurant
-renpy.script.LabelNotFound: could not find label 'inTheRestaurant'.
+  File "game/script.rpy", line 114, in script call
+    call conversationAtEvent from _call_conversationAtEvent
+  File "game/wasfound_script.rpy", line 42, in script
+    scene black with slowfade
+  File "game/wasfound_script.rpy", line 42, in <module>
+    scene black with slowfade
+                     ^^^^^^^^
+NameError: name 'slowfade' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 31, in script call
-    call inTheRestaurant from _call_inTheRestaurant
-  File "renpy/ast.py", line 1622, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 31, in script call
-    call inTheRestaurant from _call_inTheRestaurant
-  File "renpy/script.py", line 1163, in lookup
-    raise LabelNotFound(original)
-renpy.script.LabelNotFound: could not find label 'inTheRestaurant'.
+  File "game/script.rpy", line 114, in script call
+    call conversationAtEvent from _call_conversationAtEvent
+  File "game/wasfound_script.rpy", line 42, in script
+    scene black with slowfade
+  File "renpy/ast.py", line 1577, in execute
+    paired = renpy.python.py_eval(self.paired)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "renpy/python.py", line 1292, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1285, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/wasfound_script.rpy", line 42, in <module>
+    scene black with slowfade
+                     ^^^^^^^^
+NameError: name 'slowfade' is not defined
 
 macOS-15.5-arm64-arm-64bit arm64
 Ren'Py 8.4.0.25071206
-Дебург: история Мэри (ранняя сборка) 1.5.0
-Tue Jul 15 14:14:37 2025
+Дебург: история Мэри 1.5.0
+Tue Jul 15 16:16:48 2025
