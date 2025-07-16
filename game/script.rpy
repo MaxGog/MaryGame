@@ -59,6 +59,7 @@ label start:
     call inThePark from _call_inThePark
     call inTheRestaurant from _call_inTheRestaurant
     call inTheMetro from _call_inTheMetro
+    call nextDay from _call_nextDay
 
     scene black
     show text "24 часа спустя..." at truecenter with dissolve
