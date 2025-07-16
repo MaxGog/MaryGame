@@ -1,6 +1,6 @@
 ﻿define config.name = _("Дебург: история Мэри")
 define gui.show_name = True
-define config.version = "1.5.0"
+define config.version = "1.5.1"
 
 define gui.about = _p("""Добро пожаловать в Дебург!
 На первый взгляд — это тихий, ничем не примечательный городок, где живут самые обычные люди. Но так ли это на самом деле?
