@@ -11,10 +11,11 @@
 
 ## **Где скачать?** 📲  
 Игра доступна в официальных магазинах приложений:  
-- **Microsoft Store** 🪟  
-- **Google Play** 🤖  
-- **Game Jolt** 🎮  
-- **RuStore** 🇷🇺  
+- **[Microsoft Store](https://apps.microsoft.com/detail/9mz34m4bn1ll)** 🪟
+- **[Google Play](https://play.google.com/store/apps/details?id=ru.maxgog.marystoryprebeta)** 🤖
+- **[Game Jolt](https://gamejolt.com/games/deburg_marystory/831502)** 🎮
+- **[itch.io](https://maxupshur.itch.io/deburg-mary-story)** 🎮  
+- **[RuStore](https://www.rustore.ru/catalog/app/ru.maxgog.marystory)** 🇷🇺
 
 ## **Технические характеристики** ⚙️  
 - **Платформы:** Windows 🖥️, MacOS 🍏, Linux 🐧, Chrome OS 🌐, Android 📱, iOS (*скоро*) ⌛  
